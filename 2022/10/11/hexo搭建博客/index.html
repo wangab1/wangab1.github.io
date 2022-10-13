@@ -445,12 +445,12 @@
 <p>第四步：打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key，把复制的内容粘贴进去，title随便填，保存即可，我们的公钥就添加成功了，设置好如下图：</p>
 <p><img src="/images/a3.jpg"></p>
 <p>第五步：检测是否设置成功：</p>
-<p>输入命令：  $ ssh -T <a href="mailto:&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#116;&#104;&#x75;&#98;&#x2e;&#x63;&#111;&#109;">&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#116;&#104;&#x75;&#98;&#x2e;&#x63;&#111;&#109;</a> # 注意邮箱地址不用改</p>
+<p>输入命令：  $ ssh -T <a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#46;&#99;&#111;&#x6d;">&#103;&#105;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#46;&#99;&#111;&#x6d;</a> # 注意邮箱地址不用改</p>
 <p>如果提示Are you sure you want to continue connecting (yes&#x2F;no)?，输入yes，然后会看到：</p>
 <p>Hi wangab1! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
 <p>看到这个信息说明SSH已配置成功！</p>
 <p>第六步：此时你还需要配置：</p>
-<p>$ git config –global user.name “wangab1”&#x2F;&#x2F; 你的github用户名，非昵称$ git config –global user.email  “<a href="mailto:&#120;&#120;&#x78;&#x40;&#113;&#113;&#46;&#99;&#x6f;&#x6d;">&#120;&#120;&#x78;&#x40;&#113;&#113;&#46;&#99;&#x6f;&#x6d;</a>“&#x2F;&#x2F; 填写你的github注册邮箱 </p>
+<p>$ git config –global user.name “wangab1”&#x2F;&#x2F; 你的github用户名，非昵称$ git config –global user.email  “<a href="mailto:&#120;&#x78;&#120;&#64;&#113;&#113;&#46;&#x63;&#x6f;&#x6d;">&#120;&#x78;&#120;&#64;&#113;&#113;&#46;&#x63;&#x6f;&#x6d;</a>“&#x2F;&#x2F; 填写你的github注册邮箱 </p>
 <h3 id="4-使用hexo搭建博客"><a href="#4-使用hexo搭建博客" class="headerlink" title="4.使用hexo搭建博客"></a>4.使用hexo搭建博客</h3><h4 id="4-1初始化"><a href="#4-1初始化" class="headerlink" title="4.1初始化"></a>4.1初始化</h4><p>第一步：在电脑的某个地方新建一个名为hexo的文件夹（名字可以随便取），比如我的是E:\xpzsData\hexocode，由于这个文件夹将来就作为你存放代码的地方，所以最好不要随便放</p>
 <p>第二步：在E:\xpzsData\hexocode文件夹下右键打开 Git Bash Here，输入hexo init 初始化</p>
 <ul>
@@ -506,7 +506,7 @@
 <li>在这里我使用github上一个大佬的主题blinkfox&#x2F;hexo-theme-matery</li>
 </ul>
 <p> 链接：<a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">https://github.com/blinkfox/hexo-theme-matery</a></p>
-<h4 id="5-2-下载主题"><a href="#5-2-下载主题" class="headerlink" title="5.2 下载主题"></a><strong>5.2 下载主题</strong></h4><p><strong>第一步：</strong>Git Bash Here中先cd到E:\xpzsData\hexocode目录</p>
+<h4 id="6-2-下载主题"><a href="#6-2-下载主题" class="headerlink" title="6.2 下载主题"></a><strong>6.2 下载主题</strong></h4><p><strong>第一步：</strong>Git Bash Here中先cd到E:\xpzsData\hexocode目录</p>
 <p><strong>第二步：</strong>再输入命令 $ git clone 主题http链接 themes&#x2F;主题名称</p>
 <p><img src="/images/10.png"></p>
 <p><strong>注意：</strong></p>
@@ -514,14 +514,14 @@
 <li>E:\xpzsData\hexocode目录下的 theme 文件夹下存放的就是博客的主题，主题是否下载成功可到该目录下查看：</li>
 </ul>
 <p><img src="/images/11.png"></p>
-<h4 id="5-3-使用主题"><a href="#5-3-使用主题" class="headerlink" title="5.3 使用主题"></a><strong>5.3 使用主题</strong></h4><ul>
+<h4 id="6-3-使用主题"><a href="#6-3-使用主题" class="headerlink" title="6.3 使用主题"></a><strong>6.3 使用主题</strong></h4><ul>
 <li>打开E:\xpzsData\hexocode目录下的_config.yml文件，在里面找到theme: landscape改为theme: blinkfox （blinkfox为我们要使用的主题名）,然后重新执行hexo g来重新生成。</li>
 <li>如果出现一些莫名其妙的问题，可以先执行hexo clean来清理一下public的内容，然后再执行hexo g 和 hexo s 重新生成和发布。</li>
 <li>再次在浏览器中输入对应域名, 即可发现主题已更换</li>
 <li>本地端跟giuthub不一致则输入hexo d -g</li>
 </ul>
 <p><img src="/images/12.png"></p>
-<h4 id="5-4-修改主题内容"><a href="#5-4-修改主题内容" class="headerlink" title="5.4 修改主题内容"></a><strong>5.4 修改主题内容</strong></h4><p>在这里我使用的是blinkfox主题，后期相关修改参考这个主题文档</p>
+<h4 id="6-4-修改主题内容"><a href="#6-4-修改主题内容" class="headerlink" title="6.4 修改主题内容"></a><strong>6.4 修改主题内容</strong></h4><p>在这里我使用的是blinkfox主题，后期相关修改参考这个主题文档</p>
 <p><strong>文档链接：</strong><a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md">https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md</a></p>
 <ul>
 <li>注意：一些非md文件可以把他们放到source文件夹下，这里的所有文件都会原样复制（除了md文件）到public目录的</li>
@@ -542,7 +542,7 @@
 <li><strong>要把根目录下的_config.yml文件中的这些信息替换成自己的和设置中文</strong></li>
 </ul>
 <p><img src="/images/15.png"></p>
-<h4 id="5-5-blinkfox主题的相关配置问题"><a href="#5-5-blinkfox主题的相关配置问题" class="headerlink" title="5.5 blinkfox主题的相关配置问题"></a>5.5 <strong>blinkfox主题的相关配置问题</strong></h4><p><strong>配置音乐播放器：</strong>这里用的是QQ音乐</p>
+<h4 id="6-5-blinkfox主题的相关配置问题"><a href="#6-5-blinkfox主题的相关配置问题" class="headerlink" title="6.5 blinkfox主题的相关配置问题"></a>6.5 <strong>blinkfox主题的相关配置问题</strong></h4><p><strong>配置音乐播放器：</strong>这里用的是QQ音乐</p>
 <p><strong>配置留言功能（利用Valine）：</strong></p>
 <ul>
 <li>评论系统放在Leancloud上的，因此首先需要去注册一个账号</li>
