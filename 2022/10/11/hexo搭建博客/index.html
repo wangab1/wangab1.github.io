@@ -445,12 +445,12 @@
 <p>第四步：打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key，把复制的内容粘贴进去，title随便填，保存即可，我们的公钥就添加成功了，设置好如下图：</p>
 <p><img src="/images/a3.jpg"></p>
 <p>第五步：检测是否设置成功：</p>
-<p>输入命令：  $ ssh -T <a href="mailto:&#x67;&#105;&#x74;&#64;&#103;&#105;&#x74;&#104;&#x75;&#98;&#x2e;&#99;&#111;&#109;">&#x67;&#105;&#x74;&#64;&#103;&#105;&#x74;&#104;&#x75;&#98;&#x2e;&#99;&#111;&#109;</a> # 注意邮箱地址不用改</p>
+<p>输入命令：  $ ssh -T <a href="mailto:&#103;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#117;&#98;&#x2e;&#x63;&#x6f;&#109;">&#103;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#117;&#98;&#x2e;&#x63;&#x6f;&#109;</a> # 注意邮箱地址不用改</p>
 <p>如果提示Are you sure you want to continue connecting (yes&#x2F;no)?，输入yes，然后会看到：</p>
 <p>Hi wangab1! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
 <p>看到这个信息说明SSH已配置成功！</p>
 <p>第六步：此时你还需要配置：</p>
-<p>$ git config –global user.name “wangab1”&#x2F;&#x2F; 你的github用户名，非昵称$ git config –global user.email  “<a href="mailto:&#x78;&#120;&#x78;&#x40;&#113;&#113;&#46;&#99;&#111;&#x6d;">&#x78;&#120;&#x78;&#x40;&#113;&#113;&#46;&#99;&#111;&#x6d;</a>“&#x2F;&#x2F; 填写你的github注册邮箱 </p>
+<p>$ git config –global user.name “wangab1”&#x2F;&#x2F; 你的github用户名，非昵称$ git config –global user.email  “<a href="mailto:&#120;&#x78;&#120;&#x40;&#113;&#x71;&#46;&#99;&#111;&#109;">&#120;&#x78;&#120;&#x40;&#113;&#x71;&#46;&#99;&#111;&#109;</a>“&#x2F;&#x2F; 填写你的github注册邮箱 </p>
 <h3 id="4-使用hexo搭建博客"><a href="#4-使用hexo搭建博客" class="headerlink" title="4.使用hexo搭建博客"></a>4.使用hexo搭建博客</h3><h4 id="4-1初始化"><a href="#4-1初始化" class="headerlink" title="4.1初始化"></a>4.1初始化</h4><p>第一步：在电脑的某个地方新建一个名为hexo的文件夹（名字可以随便取），比如我的是E:\xpzsData\hexocode，由于这个文件夹将来就作为你存放代码的地方，所以最好不要随便放</p>
 <p>第二步：在E:\xpzsData\hexocode文件夹下右键打开 Git Bash Here，输入hexo init 初始化</p>
 <ul>
@@ -482,15 +482,23 @@
 <p>当该配置被应用后，使用hexo new命令创建新文章时，会生成相同名字的文件夹，也就是文章资源文件夹。</p>
 <p>由于项目会生成新的文件目录，同时会解析Markdown中的图片路径，会导致一个问题。</p>
 <p>如在一个文件目录下，博客名为1.md，相应的存在一个1文件夹存放图片image.jpg。</p>
-<p>在Typora编辑器中，普通的md文件使用<img src="/.io//image.jpg">能在编辑器中正常显示图片。</p>
-<p>在hexo中，按理说应该是使用<img src="/.io//image.jpg">，但网页中却无法正常显示。</p>
-<p>此时应该使用这样的方式来引入图片：</p>
+<p>在Typora编辑器中，普通的md文件使用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](image.jpg)</span><br></pre></td></tr></table></figure>
 
+<p>能在编辑器中正常显示图片。</p>
+<p>在hexo中，按理说应该是使用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](image.jpg)</span><br></pre></td></tr></table></figure>
+
+<p>但网页中却无法正常显示。</p>
+<p>此时应该使用这样的方式来引入图片：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img image.jpg 这是一张图片 %&#125;</span><br></pre></td></tr></table></figure>
 
 <p>虽然可以正常引用图片了，但是这种引用图片的方式只有一句话能形容，wtf。 </p>
 <h4 id="5-2-hexo-renderer-marked插件的安装与配置"><a href="#5-2-hexo-renderer-marked插件的安装与配置" class="headerlink" title="5.2 hexo-renderer-marked插件的安装与配置"></a>5.2 hexo-renderer-marked插件的安装与配置</h4><p>插件hexo-renderer-marked解决了这个问题</p>
 <p>安装： npm install hexo-renderer-marked –save   ，之后在config.yaml中更改配置即可</p>
-<p>之后就可以在使用 <img src="/.io//image.jpg">  的方式愉快的插入图片了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](image.jpg) </span><br></pre></td></tr></table></figure>
+
+<p>输入之后就可以在使用上述路径的方式愉快的插入图片了。</p>
 <p>hexo-renderer-marked插件可以与Typora的完美结合。</p>
 <h4 id="5-3-插入图片"><a href="#5-3-插入图片" class="headerlink" title="5.3 插入图片"></a>5.3 插入图片</h4><p><strong>插入本地图片</strong></p>
 <p>本地图片统一放在source&#x2F;images文件夹中</p>
